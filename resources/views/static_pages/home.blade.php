@@ -9,7 +9,7 @@
       Everything will begin from here
     </p>
     <p>
-      <a class="btn btn-lg btn-success" href="#" role="button">Login first</a>
+      <a class="btn btn-lg btn-success" href="{{ route('product')}} "  role="button">Sell</a>
     </p>
   </div>
 @stop
