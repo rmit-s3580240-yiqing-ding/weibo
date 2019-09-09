@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>@yield('title','StockY App')</title>
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
   </head>
   <body>
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -15,6 +15,8 @@
       </div>
     </nav>
 
+<div class="container">
     @yield('content')
+  </div>
   </body>
 </html>
