@@ -16,3 +16,11 @@ Route::get('/help', 'StaticPagesController@help');
 Route::get('/about', 'StaticPagesController@about');
 
 Route::get('product','ProductsController@create')->name('product');
+Route::get('search','ProductsController@search')->name('search');
+Route::resource('products', 'ProductsController');
+
+//Route::get('/users/{user}', 'UsersController@show')->name('users.show');
+//Route::post('/users', 'UsersController@store')->name('users.store');
+
+Route::post('/users/searchproduct', 'ProductsController@searchproduct')->name('products.searchproduct');
+Route::get('/users/{color}/{brandname}/{size}', 'ProductsController@getpost')->name('products.getpost');
