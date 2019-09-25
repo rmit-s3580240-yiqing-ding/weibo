@@ -26,19 +26,25 @@ public function searchproduct(Request $request)
         $this->validate($request, [
             'brandname' => 'required|max:50',
             'color' => 'required|max:50',
-            'size' => 'required|max:2'
+            'size' => 'required|max:2',
+            'price' => 'required|max:10',
+            'year' => 'required|max:4',
+            'series' => 'required|max:20'
         ]);
 
         $color = $request->color;
         $brandname = $request->brandname;
         $size = $request->size;
+        $price = $request->price;
+        $year = $request->year;
+        $series = $request->series;
 
-        return redirect()->route('products.getpost', [$color,$brandname,$size]);
+        return redirect()->route('products.getpost', [$color,$brandname,$size,$price,$year,$series]);
     }
 
-     public function getpost($color,$brandname,$size)
+     public function getpost($color,$brandname,$size,$price,$year,$series)
     {
-        return view('products.getpost', compact('color','brandname','size'));
+        return view('products.getpost', compact('color','brandname','size','price','year','series'));
     }
 
     public function store(Request $request)
@@ -46,13 +52,19 @@ public function searchproduct(Request $request)
         $this->validate($request, [
             'brandname' => 'required|max:50',
             'color' => 'required|max:50',
-            'size' => 'required|max:2'
+            'size' => 'required|max:2',
+            'price' => 'required|max:10',
+            'year' => 'required|max:4',
+            'series' => 'required|max:20'
         ]);
 
          $product = Product::create([
             'brandname' => $request->brandname,
             'color' => $request->color,
             'size' => $request->size,
+            'price' => $request->price,
+        'year' => $request->year,
+        'series' => $request->series,
         ]);
 
 

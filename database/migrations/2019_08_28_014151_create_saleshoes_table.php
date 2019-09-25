@@ -15,9 +15,14 @@ class CreateSaleshoesTable extends Migration
     {
         Schema::create('saleshoes', function (Blueprint $table) {
             $table->increments('id');
+            //$table->integer('email_id')->unsigned();
+            //$table->foreign('email_id')->references('id')->on('users');
             $table->string('brandname');
             $table->string('color');
             $table->integer('size');
+            $table->integer('price');
+            $table->integer('year');
+            $table->string('series');
         });
     }
 

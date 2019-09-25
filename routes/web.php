@@ -23,4 +23,4 @@ Route::resource('products', 'ProductsController');
 //Route::post('/users', 'UsersController@store')->name('users.store');
 
 Route::post('/users/searchproduct', 'ProductsController@searchproduct')->name('products.searchproduct');
-Route::get('/users/{color}/{brandname}/{size}', 'ProductsController@getpost')->name('products.getpost');
+Route::get('/users/{color}/{brandname}/{size}/{price}/{year}/{series}', 'ProductsController@getpost')->name('products.getpost');

@@ -27,6 +27,22 @@
             <input type="text" name="size" class="form-control" value="">
           </div>
 
+          <div class="form-group">
+            <label for="price">Price：</label>
+            <input type="text" name="price" class="form-control" value="">
+          </div>
+
+          <div class="form-group">
+            <label for="series">Series Name：</label>
+            <input type="text" name="series" class="form-control" value="">
+          </div>
+
+          <div class="form-group">
+            <label for="year">Year：</label>
+            <input type="text" name="year" class="form-control" value="">
+          </div>
+
+
           <button type="submit" class="btn btn-primary">Post</button>
       </form>
     </div>
